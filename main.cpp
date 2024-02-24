@@ -1,23 +1,19 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
-void drawBoard(int squareSize) {
-    // Calculate the number of characters for each row and column
-    int cellSize = squareSize + 1; // Each cell consists of the square and a border
-    int boardSize = 3 * cellSize - 1; // The whole board size
+void drawBoard(int squareSize, std::vector<char> &plays) {
+    int cellSize = squareSize + 1; 
+    int boardSize = 3 * cellSize - 1;
 
-    // Draw the board
     for (int i = 1; i < boardSize + 1; ++i) {
-        for (int j = 1; j < boardSize; ++j) {
-            // Draw horizontal lines
+        for (int j = 1; j < boardSize + 1; ++j) {
             if (i % cellSize == 0) {
                 std::cout << "---";
             } else {
-                // Draw vertical lines
                 if (j % cellSize == 0) {
-                    std::cout << "|";
+                    std::cout << " | ";
                 } else {
-                    // Draw the square's interior
                     std::cout << "   ";
                 }
             }
@@ -28,10 +24,11 @@ void drawBoard(int squareSize) {
 
 int main() {
     int squareSize;
+    std::vector<char> plays;
     std::cout << "Enter the size of each square: ";
     std::cin >> squareSize;
 
-    drawBoard(squareSize);
+    drawBoard(squareSize, plays);
 
     return 0;
 }
