@@ -3,23 +3,23 @@
 #include <vector>
 
 void drawBoard(int squareSize, std::vector<char> &plays) {
-    int cellSize = squareSize + 1; 
-    int boardSize = 3 * cellSize - 1;
+  int cellSize = squareSize + 1; 
+  int boardSize = 3 * cellSize - 1;
 
-    for (int i = 1; i < boardSize + 1; ++i) {
-        for (int j = 1; j < boardSize + 1; ++j) {
-            if (i % cellSize == 0) {
-                std::cout << "---";
-            } else {
-                if (j % cellSize == 0) {
-                    std::cout << " | ";
-                } else {
-                    std::cout << "   ";
-                }
-            }
+  for (int i = 1; i < boardSize + 1; ++i) {
+    for (int j = 1; j < boardSize + 1; ++j) {
+      if (i % cellSize == 0) {
+        std::cout << "---";
+      } else {
+        if (j % cellSize == 0) {
+          std::cout << " | ";
+        } else {
+          std::cout << "   ";
         }
-        std::cout << std::endl;
+      }
     }
+    std::cout << std::endl;
+  }
 }
 
 int main() {
