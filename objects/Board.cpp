@@ -2,6 +2,7 @@
 
 Board::Board(int s) {
   this->size = s;
+  this->subDivided = false;
   for(int a = 0; a < 3; a++) {
     for(int b = 0; b < 3; b++) {
       this->moves[a][b] = "   ";
@@ -55,4 +56,13 @@ void Board::drawBoard() {
   }
 }
 
+void Board::subDivide() {
+  this->subDivided = true;
+  for(int i = 0; i < 3; i++) {
+    for(int j = 0; j < 3; j++) {
+      Board n = Board(this->size / 5);
+      this->nested[i][j] = &n;
+    } 
+  } 
+}
 
