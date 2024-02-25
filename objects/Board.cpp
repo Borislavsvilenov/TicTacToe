@@ -22,7 +22,6 @@ void Board::drawBoard() {
 
   for(int i = 1; i < boardSize + 1; i++) {
     for(int j = 1; j < boardSize + 1; j++) {
-      std::cout << "drawn" << std::endl;
       if(i % cellSize == 0) {
         std::cout << "---";
         genNewLineC = true;
