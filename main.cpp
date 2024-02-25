@@ -2,34 +2,33 @@
 #include <string>
 #include <vector>
 
-void drawBoard(int squareSize, std::vector<char> &plays) {
-  int cellSize = squareSize + 1; 
-  int boardSize = 3 * cellSize - 1;
-
-  for (int i = 1; i < boardSize + 1; ++i) {
-    for (int j = 1; j < boardSize + 1; ++j) {
-      if (i % cellSize == 0) {
-        std::cout << "---";
-      } else {
-        if (j % cellSize == 0) {
-          std::cout << " | ";
-        } else {
-          std::cout << "   ";
-        }
-      }
-    }
-    std::cout << std::endl;
-  }
-}
+#include "objects/Board.hpp"
 
 int main() {
-    int squareSize;
-    std::vector<char> plays;
-    std::cout << "Enter the size of each square: ";
-    std::cin >> squareSize;
+  int squareSize;
+  int player = 1;
+  bool run = true;
 
-    drawBoard(squareSize, plays);
+  Board game = Board(squareSize);
 
-    return 0;
+  std::cout << "Enter the size of each square: ";
+  std::cin >> squareSize;
+
+  while(run) {
+    char X = 0;
+    char Y = 0;
+
+    game.drawBoard();
+    std::cout << std::endl;
+
+    if(player == 1) {
+      std::cout << "player 1's turn: x ";
+      std::cin >> X;
+      std::cout << std::endl;
+      std::cout << "player 1's turn: y ";
+      std::cin >> Y;
+    }
+  }
+  return 0;
 }
 

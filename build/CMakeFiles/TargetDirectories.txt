@@ -1,0 +1,3 @@
+/Users/borislavsvilenov/Projects/CPP/TicTacToe/build/CMakeFiles/TicTacToe.dir
+/Users/borislavsvilenov/Projects/CPP/TicTacToe/build/CMakeFiles/edit_cache.dir
+/Users/borislavsvilenov/Projects/CPP/TicTacToe/build/CMakeFiles/rebuild_cache.dir
