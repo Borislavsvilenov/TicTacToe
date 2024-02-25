@@ -20,30 +20,40 @@ void Board::drawBoard() {
   bool genNewLineC = false;
 
   for(int i = 1; i < boardSize + 1; i++) {
-    for(int j = 1; j < boardSize + 1; j++) {
+    for(int j = 1; j < boardSize + 1; j++) { 
       if(i % cellSize == 0) {
+
         std::cout << "---";
         genNewLineC = true;
+
       } else {
+
         genNewLineP = genNewLineC;
         genNewLineC = false;
+
+        if(genNewLineC == false && genNewLineP == true) {
+          movesX++;
+        }
+
         if(j % cellSize == 0) {
+
           std::cout << " | ";
           movesY++;
+
         } else {
+
           if((j - cellSize) % cellSize == 0) {
             std::cout << "   ";
+
           } else {
+
             std::cout << this->moves[movesX][movesY]; 
           }
         }
-      }
-      if(genNewLineC == false && genNewLineP == true) {
-        movesX++;
-      }
+      } 
     }
     std::cout << std::endl;
-    movesY = 0;
+    movesY = 0; 
   }
 }
 
