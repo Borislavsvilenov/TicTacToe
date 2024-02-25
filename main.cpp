@@ -35,7 +35,7 @@ int main() {
       X = std::stoi(Xin);
       Y = std::stoi(Yin);
       
-      game.moves[X][Y] = " x ";
+      game.moves[Y][X] = " x ";
 
       player = 2;
 
@@ -51,7 +51,7 @@ int main() {
       X = std::stoi(Xin);
       Y = std::stoi(Yin);
       
-      game.moves[X][Y] = " o ";
+      game.moves[Y][X] = " o ";
 
       player = 1;
 

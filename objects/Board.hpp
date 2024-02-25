@@ -11,5 +11,6 @@ public:
   
   Board(int s);
   void drawBoard();
+  void subdivide();
 
 };
