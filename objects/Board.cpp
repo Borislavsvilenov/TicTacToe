@@ -4,10 +4,9 @@ Board::Board(int s) {
   this->size = s;
   for(int a = 0; a < 3; a++) {
     for(int b = 0; b < 3; b++) {
-      this->moves[a][b] = " x ";
+      this->moves[a][b] = "   ";
     }
   }
-  this->moves[1][1] = " o ";
 }
 
 void Board::drawBoard() {

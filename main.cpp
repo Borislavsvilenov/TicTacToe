@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <vector>
 
 #include "objects/Board.hpp"
 
@@ -15,8 +14,11 @@ int main() {
   Board game = Board(squareSize);
   
   while(run) {
-    char Xin = 0;
-    char Yin = 0;
+    std::string Xin = "0";
+    std::string Yin = "0";
+
+    int X = 0;
+    int Y = 0;
 
     game.drawBoard();
     std::cout << std::endl;
@@ -29,6 +31,12 @@ int main() {
       std::cout << "player 1's turn: y ";
       std::cin >> Yin;
       std::cout << std::endl;
+      
+      X = std::stoi(Xin);
+      Y = std::stoi(Yin);
+      
+      game.moves[X][Y] = " x ";
+
       player = 2;
 
     } else if(player == 2) {
@@ -39,6 +47,12 @@ int main() {
       std::cout << "player 2's turn: y ";
       std::cin >> Yin;
       std::cout << std::endl;
+      
+      X = std::stoi(Xin);
+      Y = std::stoi(Yin);
+      
+      game.moves[X][Y] = " o ";
+
       player = 1;
 
     }

@@ -5,9 +5,10 @@
 class Board {
 private:
   int size;
-  std::string moves[3][3];
 
 public:
+  std::string moves[3][3];
+  
   Board(int s);
   void drawBoard();
 
