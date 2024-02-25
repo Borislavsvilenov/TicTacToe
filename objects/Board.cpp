@@ -44,9 +44,7 @@ void Board::drawBoard() {
 
           if((j - cellSize) % cellSize == 0) {
             std::cout << "   ";
-
           } else {
-
             std::cout << this->moves[movesX][movesY]; 
           }
         }
